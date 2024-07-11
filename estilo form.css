@@ -7,7 +7,7 @@
 }
 
 .formulario{
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -15,6 +15,7 @@
     height: 400px;
     background: #46B910;
     border-radius: 10px;
+    z-index: 1;
 }
 
 .formulario .titulo {
@@ -126,15 +127,6 @@ section{
     height: calc(100vh - 80px);
 }
 
-@media (max-width: 952px){
-    .enlace{
-        padding-left: 20px;
-    }
-    nav ul li a{
-        font-size: 16px;
-    }
-}
-
 @media (max-width: 858px){
     .checkbtn{
         display: block;
@@ -148,24 +140,22 @@ section{
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 2;
     }
     nav ul li{
         display: block;
         margin: 50px 0;
         line-height: 30px;
     }
-    nav ul li a{
+    .principal nav ul li a{
         font-size: 20px;
     }
-    li a:hover{
+    .principal ul li a:hover{
         background: none;
         color: darkblue;
     }
     #check:checked ~ ul{
         left:0;
     }
-
-    #check:checked ~ .formulario{
-        right: -100%;
-    }
+    
 }

@@ -22,7 +22,7 @@ body {
     height: auto;
     margin: 50px auto 0;
     overflow: hidden;
-
+    z-index: 1;
 }
 
 .slider-box ul {
@@ -201,6 +201,7 @@ section{
         left: -100%;
         text-align: center;
         transition: all .5s;
+        z-index: 2;
     }
     .principal nav ul li{
         display: block;
@@ -214,14 +215,15 @@ section{
         background: none;
         color: darkblue;
     }
-    #check:checked ~ ul{
+    #check:checked ~ ul {
         left:0;
     }
     .texto {
         top: 15%;
     }
-    #check:checked ~ .texto{
-        visibility: collapse;
-    }    
+    .slider-box img {
+    width: 95%;
+    margin-left: 3%;
+    }       
 }
 
